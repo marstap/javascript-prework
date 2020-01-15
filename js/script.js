@@ -54,13 +54,13 @@ function result(userMove, computerMove) {
     showMessage('Computer won this round!');
   }
   playGame(3);
+  }
 }
-
 const userMove = getUserMove();
 const computerMove = getComputerMove();
 console.log({userMove, computerMove});
 result(userMove, computerMove);
-}
+
 document.getElementById('play-rock').addEventListener('click', function(){
   playGame(1);
 });
