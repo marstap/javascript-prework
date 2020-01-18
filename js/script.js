@@ -1,5 +1,7 @@
 function playGame(playerInput){
-  clearMessages ();
+  clearMessages ()
+  function clearMessages (){}
+
 const messagesDOM = document.getElementById('messages');
 function showMessage(message) {
   messagesDOM.innerHTML = message;
@@ -53,20 +55,19 @@ function result(userMove, computerMove) {
   } else if (userMove === 'scissors' && computerMove === 'stone') {
     showMessage('Computer won this round!');
   }
-  playGame(3);
-  }
 }
+
 const userMove = getUserMove();
 const computerMove = getComputerMove();
 console.log({userMove, computerMove});
 result(userMove, computerMove);
-
+}
 document.getElementById('play-rock').addEventListener('click', function(){
-  playGame(1);
+  playGame('1');
 });
 document.getElementById('play-paper').addEventListener('click', function(){
-  playGame(2);
+  playGame('2');
 });
 document.getElementById('play-scissor').addEventListener('click', function(){
-  playGame(3);
+  playGame('3');
 });
